@@ -1,0 +1,24 @@
+{
+  "name": "p2",
+  "version": "1.0.0",
+  "description": "API desenvolvida como requisito para P2 da matéria de Desenvolvimento Web 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "javascript",
+    "p2"
+  ],
+  "author": "Francisco de Souza Sancho",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.16.0",
+    "nodemon": "^3.1.10"
+  },
+  "type": "module"
+}
