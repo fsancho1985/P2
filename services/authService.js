@@ -1,10 +1,10 @@
 import { User } from "../models/user.js";
 
-export async function registerUser({name, email, password}) {
+export async function registerUser({username, name, email, password}) {
     const existingUser = await User.findOne({ email });
     if (existingUser) throw new Error("Email já cadastrado!");
 
-    const user = new User({ name, email, password });
+    const user = new User({username, name, email, password });
     await user.save();
     return user;
 }

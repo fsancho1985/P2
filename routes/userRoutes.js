@@ -28,19 +28,19 @@ export function routeUsers(app) {
         }
     });
 
-    app.post("/api/users", async (req, res) => {
-        try {
-            const user = await listUsers({ "username": req.body.username });
-            console.log(user);
-            if (user.length > 0) {
-                return res.status(403).json({ "error": "Username já existe! "});
-            }
-            const userIncluded = await create(req.body);
-            return res.status(201).json(userIncluded);
-        } catch (error) {
-            return res.status(500).json({ "error": error });
-        }
-    });
+    // app.post("/api/users", async (req, res) => {
+    //     try {
+    //         const user = await listUsers({ "username": req.body.username });
+    //         console.log(user);
+    //         if (user.length > 0) {
+    //             return res.status(403).json({ "error": "Username já existe! "});
+    //         }
+    //         const userIncluded = await create(req.body);
+    //         return res.status(201).json(userIncluded);
+    //     } catch (error) {
+    //         return res.status(500).json({ "error": error });
+    //     }
+    // });
 
     app.delete("/api/users/:id", async (req, res) => {
         try {
